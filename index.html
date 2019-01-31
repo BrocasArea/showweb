@@ -19,94 +19,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="./css/app-d8aff3f0a7.min.css" >
+    <link rel="stylesheet" href="./css/app-d8aff3f0a7.min.css">
+    <link rel="stylesheet" href="./css/app2_rwd.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        img{
-            max-width: 100%;
-        }
-        .download{
-            top:0;
-            z-index: 9;
-            /* width: 100%; */
-            /* max-width: 750px; */
-
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
-            -moz-box-pack: justify;
-            -webkit-box-pack: justify;
-            box-pack: justify;
-            align-items: center;
-            -webkit-align-items: center;
-            box-align: center;
-            -moz-box-align: center;
-            -webkit-box-align: center;
-
-            background: linear-gradient(-32deg, #9033fc 0, #c00afb 100%);
-            padding: .22rem;
-        }
-        .download > img {
-            /* display: block; */
-            /* width:100%; */
-            width: 4.25rem
-        }
-        .custom-container{
-            max-width:760px;
-        }
-        
-    </style>
+    
 </head>
 <body>
-<div class="container custom-container">
-    <div class="row justify-content-center  position-fixed download">
-       
-        
-                <img src="./images/logo-371450df8f.png"> 
-                <!-- <a class="download-btn "
-                href="javascript:;"
-          data-clipboard-target="#bar2">立即下载</a> -->
-       
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <div class="row justify-content-around">
-                        <div class="col-6 col-md-6">
-                                <a class="download-ios" 
-                                href="javascript:;">IOS下载</a>
-                        </div>
-                        <div class="col-6 col-md-6">
-                                <a class="download-android "
-                                href="javascript:;">Android下载</a>
-                        </div>
-                        
-                </div>
-            </div>
-        </div>
+<div class="main clearfix container">
+    <div class="download-container download-head"><img src="./images/logo-371450df8f.png"> <a class="download-btn "
+                                                                                              href="javascript:;"
+                                                                                              data-clipboard-target="#bar2">立即下载</a>
+        <a class="download-ios hide"
+           href="javascript:;"
+        >IOS下载</a>
+        <a class="download-android hide"
+           href="javascript:;"
+        >Android下载</a>
     </div>
-    <div id="mySwipe" class="swipe row justify-content-center" style="visibility: visible;">
-        <div class="swipe-wrap" >
+    <div id="mySwipe" class="swipe" style="visibility: visible;">
+        <div class="swipe-wrap" style="width: 3000px;">
             <div data-index="0"
-                >
+                 style="width: 1500px; left: 0px; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
                 <img src="./images/slid_1-d0f77ee2cf.jpg"></div>
             <div data-index="1"
-            >
+                 style="width: 1500px; left: -1500px; transition-duration: 0ms; transform: translate(1500px, 0px) translateZ(0px);">
                 <img src="./images/slid_2-2d21af1afa.jpg"></div>
             <div data-index="2"
-            >
+                 style="width: 1500px; left: -3000px; transition-duration: 0ms; transform: translate(1500px, 0px) translateZ(0px);">
                 <img src="./images/slid_3-627cf0c071.jpg"></div>
         </div>
         <img src="./images/slid_bottom-06d281ad28.png" class="slid_mask"></div>
-    <div class="content row justify-content-center">
-        <div class="tips"><img class="sub-title-1" src="./images/sub_title_1-4afbd3eeed.png"></div>
+    <div class="content">
+        <div class="tips"><img class="sub-title-1" style="max-width:100%;" src="./images/sub_title_1-4afbd3eeed.png"></div>
         <div class="ios-tips"><img src="./images/ios-006-10dc2d242b.png"></div>
         <div class="android-tips"><img src="./images/android-f0137a7b0d.png"></div>
-        <div class=' row justify-content-center qrcode-background ' style="width:730px; height:5rem;" >
-            <!-- <div class="qrcode-background "> -->
-                    <div id="qrcode" class="ewmImg" >
-                            <!--<canvas width="100" height="100" style="display: none;"></canvas>-->
-                    </div>
-            <!-- </div> -->
-            <!-- <img src="./images/potato-e581df7d66.png" style="max-width: 100%;"> -->
+        <div class="android-tips" style="position:relative;">
+            <img src="./images/potato-e581df7d66.png" style="margin:auto;max-width:750px; ">
+            <div id="qrcode" class="ewmImg" style="max-width:750px; margin:auto;position: absolute;
+            left:50%;
+            top:50%;
+            max-width:100%;">
+                <!--<canvas width="100" height="100" style="display: none;"></canvas>-->
+            </div>
         </div>
     </div>
     <div class="dialog-container hide">
@@ -121,16 +76,12 @@
 </div>
 <textarea id="bar2" style="position: fixed; top: 0;opacity: 0;width: 1px;"></textarea>
 <script src="./js/jquery-3.3.1.min.js"></script>
-<!-- <script src="./js/clipboard.min.js"></script> -->
+<script src="./js/clipboard.min.js"></script>
 <script src="./js/qrcode.min.js"></script>
-<!-- <script src="./js/swipe.min.js"></script> -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<!-- <script>document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + 'px';</script>
-<script src="./js/app-huang.js"></script> -->
+<script src="./js/swipe.min.js"></script>
+<!-- <script>document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + 'px';</script> -->
+<script src="./js/app-huang.js"></script>
 <!--<script src="./js/huangguaold.js"></script>-->
-<script>
-    var qrcode = new QRCode("qrcode", {width:60, height:60}).makeCode('http://app.line880.com');
-</script>
+
 </body>
 </html>
