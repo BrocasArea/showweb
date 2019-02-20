@@ -116,7 +116,7 @@ var objApp = {
             }
         })
     }, makeCode: function () {
-       // new QRCode(document.getElementById("qrcode"), {width: 100, height: 100}).makeCode(common.qrcodeUrl)
+       new QRCode(document.getElementById("qrcode"), {width: 100, height: 100}).makeCode(common.qrcodeUrl)
     }, initSiteUser: function (o) {
 
     }, checkPlatForm: function () {
