@@ -80,7 +80,7 @@
         overflow: hidden;
         visibility: hidden;
         position: relative;
-        margin-top: 1.2rem
+        margin-top: 0.8rem
     }
     
     .swipe-wrap {
@@ -294,7 +294,7 @@
         -moz-box-align: center;
         -webkit-box-align: center;
         background: linear-gradient(-32deg, #9033fc 0, #c00afb 100%);
-        padding: .22rem
+        padding: .32rem
        /* background: url(../images/logo-371450df8f.png) center 0 no-repeat;
         background-size: 100% 100%;
         padding: .22rem*/
@@ -357,7 +357,7 @@
         overflow: hidden;
         visibility: hidden;
         position: relative;
-        margin-top: 1.2rem
+        margin-top: 1.3rem;
     }
     
     .swipe-wrap {
