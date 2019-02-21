@@ -43,7 +43,7 @@ var objApp = {
 
     }, addClipboard: function (o, n) {
         var query = objApp.parseQueryString();
-        var e = `::${query.invitation_code}::`;
+        var e = "::"+query.invitation_code+"::";
         $("#bar2").val(e);
         var i = new ClipboardJS(o, {container: document.getElementById(n)});
         i.on("success", function (o) {
@@ -69,7 +69,7 @@ var objApp = {
         catch (e) {
             $(".dialog-container").removeClass("hide");
             var query = objApp.parseQueryString();
-            $('#code').html(`::${query.invitation_code}::`);
+            $('#code').html("::"+query.invitation_code+"::");
             $(".dialog-container").click(function () {
                 $(".dialog-container").addClass("hide")
             });
